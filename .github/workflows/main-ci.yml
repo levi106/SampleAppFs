@@ -14,6 +14,7 @@ jobs:
       
       - name: Prepare
         id: pre
+        run: |
           DOCKER_IMAGE=${{ secrets.ACR_NAME }}/sampleappfs
           VERSION=edge
           if [[ $GITHUB_REF == refs/tags/* ]]; then
